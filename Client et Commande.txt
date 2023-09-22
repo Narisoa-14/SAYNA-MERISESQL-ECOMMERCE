@@ -1,0 +1,72 @@
+INSERT INTO commande (ID_de_commande, Date_de_commande, Etat_de_commande, ID_du_Utilisateur, ID_du_client)
+VALUES
+    (5, '2023-07-21 12:00:00', 'Envoyer', 2, 2),
+    (2, '2023-07-22 12:00:0', 'Livrée', 1, 1),
+    (3, '2023-07-20 12:00:00', 'En cours', 11, 11);
+
+
+INSERT INTO utilisateur_administrateur (ID_de_utilisateur, Nom_utulisateur, Mot_de_passe, utilisateur_normal, administrateur)
+VALUES 
+       (1, 'Franco Yannick', '00001111', 1, 0);
+       
+INSERT INTO utilisateur_administrateur (ID_de_utilisateur, Nom_utulisateur, Mot_de_passe, utilisateur_normal, administrateur)
+VALUES 
+       (2, 'Abel Rey', 'password15', 0, 1),
+       (3, 'Aina Rakoto', 'rakoto2023', 0, 1),
+       (4, 'François De paul', '11111111', 0, 1),
+       (5, 'John Doe', 'password123', 1, 0);
+
+
+INSERT INTO client (ID_du_Client, Nom, Prénom, Adresse_de_livraison, Numéro_de_téléphone)
+VALUES
+    (1, 'Doe', 'John', '123 Rue de la Poste', 555-123-4567),
+    (2, 'Smith', 'Jane', '456 Avenue des Fleurs', 555-987-6543),
+    (3, 'Johnson', 'Robert', '789 Rue Principale', 555-555-5555),
+    (4, 'Williams', 'Emily', '321 Rue du Soleil', 555-111-2222),
+    (5, 'Brown', 'Michael', '555 Boulevard des Arbres', 555-888-9999),
+    (6, 'Davis', 'Sarah', '777 Avenue des Étoiles', 555-777-3333),
+    (7, 'Wilson', 'David', '888 Rue de la Lune', 555-666-4444),
+    (8, 'Miller', 'Jessica', '999 Rue de la Terre', 555-999-7777),
+    (9, 'Jones', 'Matthew', '1010 Avenue de Mars', 555-333-6666),
+    (10, 'Garcia', 'Laura', '2020 Rue de Vénus', 555-222-5555),
+    (11, 'Martinez', 'Daniel', '3030 Boulevard de Jupiter', 555-444-3333),
+    (12, 'Hernandez', 'Emily', '4040 Avenue de Saturne', 555-777-1111),
+    (13, 'Lopez', 'Alex', '5050 Rue ', 555-111-8888),
+    (14, 'Gonzalez', 'Olivia', '6060 Avenue de Neptune', 555-888-4444),
+    (15, 'Rodriguez', 'Sophia', '7070 Rue de Pluton', 555-222-7777),
+    (16, 'Perez', 'Aiden', '8080 Boulevard de Mercure', 555-333-1111),
+    (17, 'Williams', 'Ella', '9090 Avenue de Vénus', 555-666-5555),
+    (18, 'Smith', 'Liam', '10101 Rue de la Terre', 555-555-2222),
+    (19, 'Johnson', 'Emma', '11111 Boulevard de Mars', 555-777-4444),
+    (20, 'Brown', 'Noah', '12121 Avenue de Jupiter', 555-444-1111);
+
+SELECT *FROM Client;
+
+SELECT Nom, Prénom FROM Client WHERE Nom LIKE 'S%';
+
+SELECT COUNT(*) FROM Client;
+
+SELECT * FROM Client
+INNER JOIN Commande ON Client.ID_du_client = Commande.ID_du_client;
+
+
+
+SELECT Nom, COUNT(*) AS Nombre_de_commandes
+FROM Client
+GROUP BY Nom;
+
+
+
+UPDATE Client
+SET Nom = 'Rico yan'
+WHERE ID_du_client = 11;
+
+
+INSERT INTO Client (Nom, Prénom, Adresse_de_livraison, Numéro_de_téléphone)
+VALUES ('Franco', 'Yan Nick', 'Fianarantsoa', '0612345678');
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+CREATE TABLE
+  Utilisateur_Administrateur (
+    ID_de_utilisateur INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    Nom_utulisateur VARCHAR(255),
+    Mot_de_passe VARCHAR(64),
+    utilisateur_normal VARCHAR(255),
+    administrateur VARCHAR(255)
+  );
+
+CREATE TABLE
+  Client (
+    ID_du_Client INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Nom VARCHAR(255),
+    Prénom VARCHAR(255),
+    Adresse_de_livraison VARCHAR(255),
+    Numéro_de_téléphone INT,
+    ID_de_commande INT,
+    FOREIGN KEY (ID_de_commande) REFERENCES commande (ID_de_commande)
+  );
+
+CREATE TABLE
+  Produit (
+    ID_du_produit INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Nom_du_produit VARCHAR(255),
+    Description VARCHAR(255),
+    Prix DOUBLE,
+    Stock_disponible VARCHAR(255)
+  );
+
+CREATE TABLE
+  Catégorie (
+    ID_du_Client INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Nom_de_la_catégorie VARCHAR(255),
+    Description_de_la_catégorie VARCHAR(255)
+  );
+
+CREATE TABLE
+  Produit_catégorie (
+    ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    ID_du_Client INT NOT NULL,
+    ID_du_produit INT NOT NULL,
+    FOREIGN KEY (ID_du_Client) REFERENCES Catégorie (ID_du_Client),
+    FOREIGN KEY (ID_du_produit) REFERENCES Produit (ID_du_produit)
+  );
+
+CREATE TABLE
+  Commande_produit (
+    ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    ID_du_Client INT NOT NULL,
+    ID_du_produit INT NOT NULL,
+    FOREIGN KEY (ID_du_Client) REFERENCES Commande (ID_de_commande),
+    FOREIGN KEY (ID_du_produit) REFERENCES Produit (ID_du_produit)
+  );
+
+CREATE TABLE
+  Commande (
+    ID_de_commande INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Date_de_commande DATETIME,
+    Etat_de_commande VARCHAR(255),
+    ID_du_utilisateur INT NOT NULL,
+    FOREIGN KEY (ID_du_utilisateur) REFERENCES Utilisateur_Administrateur (ID_de_utilisateur)
+  );
+
+CREATE TABLE
+  Client (
+    ID_du_Client INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Nom VARCHAR(255),
+    Prénom VARCHAR(255),
+    Adresse_de_livraison VARCHAR(255),
+    Numéro_de_téléphone INT
+  );
+
+ALTER TABLE
+  Commande
+ADD COLUMN
+  ID_du_client INT NOT NULL;
+
+ALTER TABLE
+  Commande
+ADD
+  CONSTRAINT fk_Commande_Client FOREIGN KEY (ID_du_Client) REFERENCES Client (ID_du_Client);

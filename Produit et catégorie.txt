@@ -1,0 +1,118 @@
+INSERT INTO catégorie (ID_du_Client, Nom_de_la_Catégorie, Description_de_la_Catégorie)
+VALUES
+    (1, 'Électronique', 'Produits électroniques et gadgets'),
+    (2, 'Vêtements', 'Vêtements pour hommes, femmes et enfants'),
+    (3, 'Mobilier', 'Meubles pour la maison et le bureau'),
+    (4, 'Sport', 'Équipements sportifs et articles de sport'),
+    (5, 'Alimentation', 'Produits alimentaires et boissons'),
+    (6, 'Beauté', 'Produits de beauté et soins personnels'),
+    (7, 'Jouets', 'Jouets et jeux pour enfants'),
+    (8, 'Livres', 'Livres imprimés et électroniques'),
+    (9, 'Automobile', 'Pièces et accessoires automobiles'),
+    (10, 'Maison et Jardin', 'Articles pour la maison et le jardin'),
+    (11, 'Électronique', 'Produits électroniques et gadgets'),
+    (12, 'Vêtements', 'Vêtements pour hommes, femmes et enfants'),
+    (13, 'Mobilier', 'Meubles pour la maison et le bureau'),
+    (14, 'Sport', 'Équipements sportifs et articles de sport'),
+    (15, 'Alimentation', 'Produits alimentaires et boissons'),
+    (16, 'Beauté', 'Produits de beauté et soins personnels'),
+    (17, 'Jouets', 'Jouets et jeux pour enfants'),
+    (18, 'Livres', 'Livres imprimés et électroniques'),
+    (19, 'Automobile', 'Pièces et accessoires automobiles'),
+    (20, 'Maison et Jardin', 'Articles pour la maison et le jardin'),
+    (21, 'Électronique', 'Produits électroniques et gadgets'),
+    (22, 'Vêtements', 'Vêtements pour hommes, femmes et enfants'),
+    (23, 'Mobilier', 'Meubles pour la maison et le bureau'),
+    (24, 'Sport', 'Équipements sportifs et articles de sport'),
+    (25, 'Alimentation', 'Produits alimentaires et boissons'),
+    (26, 'Beauté', 'Produits de beauté et soins personnels'),
+    (27, 'Jouets', 'Jouets et jeux pour enfants'),
+    (28, 'Livres', 'Livres imprimés et électroniques'),
+    (29, 'Automobile', 'Pièces et accessoires automobiles'),
+    (30, 'Maison et Jardin', 'Articles pour la maison et le jardin');
+
+INSERT INTO produit (ID_du_produit, Nom_du_produit, Description, Prix, Stock_disponible)
+VALUES
+    (1, 'Smartphone', 'Téléphone intelligent haut de gamme', 599.99, 100),
+    (2, 'Ordinateur portable', 'Ordinateur portable performant', 999.99, 50),
+    (3, 'Téléviseur 4K', 'Téléviseur Ultra HD avec écran LED', 799.99, 30),
+    (4, 'Caméra DSLR', 'Appareil photo numérique professionnel', 1299.99, 20),
+    (5, 'Console de jeux', 'Console de jeux de dernière génération', 399.99, 75),
+    (6, 'Casque audio sans fil', 'Casque audio Bluetooth de haute qualité', 149.99, 150),
+    (7, 'Tablette', 'Tablette Android avec écran tactile', 299.99, 40),
+    (8, 'Imprimante laser', 'Imprimante laser monochrome rapide', 199.99, 25),
+    (9, 'Aspirateur robot', 'Aspirateur robot intelligent', 299.99, 60),
+    (10, 'Enceinte Bluetooth', 'Enceinte portable avec connectivité Bluetooth', 49.99, 200),
+    (11, 'Smartwatch', 'Montre intelligente avec suivi de la santé', 199.99, 80),
+    (12, 'Laptop gaming', 'Ordinateur portable pour le jeu', 1299.99, 35),
+    (13, 'Réfrigérateur', 'Réfrigérateur avec congélateur', 799.99, 15),
+    (14, 'Machine à café', 'Machine à café programmable', 149.99, 50),
+    (15, 'Fer à repasser', 'Fer à repasser vapeur avec fonction de défroissage', 49.99, 100),
+    (16, 'Tapis de yoga', 'Tapis de yoga antidérapant', 29.99, 200),
+    (17, 'Enceinte intelligente', 'Assistant vocal avec haut-parleur', 79.99, 60),
+    (18, 'Souris sans fil', 'Souris ordinateur sans fil', 19.99, 300),
+    (19, 'Chargeur solaire', 'Chargeur solaire portable pour smartphones', 39.99, 75),
+    (21, 'Lave-vaisselle', 'Lave-vaisselle en acier inoxydable', 699.99, 10),
+    (22, 'Cafetière', 'Cafetière programmable avec carafe en verre', 69.99, 30),
+    (23, 'Mixeur à main', 'Mixeur à main électrique avec lames en acier', 39.99, 40),
+    (24, 'Couverture chauffante', 'Couverture chauffante électrique', 59.99, 50),
+    (25, 'Tondeuse à gazon', 'Tondeuse à gazon électrique', 249.99, 15),
+    (26, 'Lampe de bureau', 'Lampe de bureau à LED avec réglage de la luminosité', 29.99, 100),
+    (27, 'Casque de vélo', 'Casque de vélo léger et aérodynamique', 39.99, 50),
+    (28, 'Sac à dos', 'Sac à dos spacieux pour le quotidien', 49.99, 75),
+    (29, 'Pèse-personne', 'Pèse-personne numérique avec affichage LCD', 19.99, 200),
+    (30, 'Oreiller en mousse à mémoire de forme', 'Oreiller ergonomique pour un sommeil confortable', 34.99, 150),
+    (31, 'Enceinte Bluetooth étanche', 'Enceinte portable étanche pour une utilisation en extérieur', 69.99, 100),
+    (32, 'Clavier sans fil', 'Clavier sans fil avec pavé tactile', 29.99, 80),
+    (33, 'Ventilateur de bureau', 'Ventilateur de bureau silencieux avec trois vitesses', 19.99, 120),
+    (34, 'Couteau de cuisine', 'Ensemble de couteaux de cuisine en acier inoxydable', 49.99, 40),
+    (35, 'Brosse à dents électrique', 'Brosse à dents électrique avec minuteur', 39.99, 60),
+    (36, 'Chargeur rapide USB', 'Chargeur rapide USB pour smartphones', 14.99, 250),
+    (37, 'Enceinte Bluetooth portable', 'Enceinte portable avec son stéréo', 59.99, 90),
+    (38, 'Thermomètre numérique', 'Thermomètre numérique infrarouge sans contact', 29.99, 70),
+    (39, 'Télécommande universelle', 'Télécommande universelle pour appareils électroniques', 19.99, 100),
+    (40, 'Guitare acoustique', 'Guitare acoustique avec étui', 149.99, 25),
+    (41, 'Microphone USB', 'Microphone USB pour enregistrement audio', 59.99, 30),
+    (42, 'Piano numérique', 'Piano numérique avec touches lestées', 699.99, 10),
+    (43, 'Cafetière à expresso', 'Cafetière à expresso automatique', 299.99, 15),
+    (44, 'Machine à laver', 'Machine à laver à chargement frontal', 499.99, 10),
+    (45, 'Sèche-linge', 'Sèche-linge électrique avec plusieurs programmes', 399.99, 10),
+    (46, 'Four à micro-ondes', 'Four à micro-ondes compact', 79.99, 20);
+
+
+SELECT * FROM produit;
+
+
+SELECT Nom_du_produit, Prix FROM produit;
+
+
+
+SELECT * FROM produit ORDER BY Prix ASC LIMIT 10;
+
+
+SELECT * FROM produit WHERE Prix < 100;
+
+
+SELECT AVG(Prix) AS Moyenne_des_prix FROM produit;
+
+
+
+SELECT catégorie.Nom_de_la_catégorie, COUNT(produit.ID_du_produit) AS Total_des_produits
+FROM produit
+JOIN catégorie ON produit.ID_Catégorie = catégorie.ID_Catégorie
+GROUP BY catégorie.Nom_de_la_catégorie;
+
+
+
+UPDATE produit
+SET Prix = 79.99
+WHERE ID_du_produit = 1;
+
+
+
+INSERT INTO produit (ID_du_produit, Nom_du_produit, Description, Prix, Stock_disponible)
+VALUES (66, 'Ecouter', 'Description du nouveau produit', 49.99, 50);
+
+
+DELETE FROM produit WHERE ID_du_produit = 21;
+
